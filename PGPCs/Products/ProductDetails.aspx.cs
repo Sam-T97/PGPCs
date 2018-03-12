@@ -47,7 +47,7 @@ public partial class Products_ProductDetails : Page
                 int quant = int.Parse(quantity.Text);
                 var usersCart = new ShoppingCartActions();
                 usersCart.AddToCart(usrID, prodID, quant);
-                Response.Redirect("~/Account/WebCart");
+                Response.Redirect("~/ShoppingCart");
             }
             else
             {

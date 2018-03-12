@@ -17,7 +17,7 @@ namespace PGPCs.Models
         public DbSet<PRODUCT> Products { get; set; }
         public DbSet<CUSTOMER> Customers { get; set; }
         public DbSet<ADMIN> Admins { get; set; }
-        //public DbSet<SHOPPINGCART>ShoppingCart { get; set; }
         public DbSet<SHOPPINGCARTITEMS> ShoppingCartItems { get; set; }
+        //public DbSet<SHOPPINGCART>ShoppingCart { get; set; }
     }
 }

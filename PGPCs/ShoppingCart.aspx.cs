@@ -14,12 +14,13 @@ public partial class ShoppingCart : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        ShoppingCartList.DataSource = GetCartItems();
+        ShoppingCartList.DataBind();
     }
     public List<SHOPPINGCARTITEMS> GetCartItems()
     {
         ShoppingCartActions actions = new ShoppingCartActions();
         return actions.GetCartItems(int.Parse(Session["UserID"].ToString()));
     }
-
+    
 }
