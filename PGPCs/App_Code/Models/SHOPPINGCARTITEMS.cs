@@ -19,7 +19,7 @@ namespace PGPCs
 
         public int QUANTITY { get; set; }
 
-        public virtual SHOPPINGCART SHOPPINGCART { get; set; }
+        //public virtual SHOPPINGCART SHOPPINGCART { get; set; }
         
         public virtual PRODUCT PRODUCT { get; set; }
     }

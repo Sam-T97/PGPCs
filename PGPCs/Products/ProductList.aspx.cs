@@ -24,9 +24,4 @@ public partial class Products_ProductList : System.Web.UI.Page
         }
         return query;
     }
-
-    protected void BtnAddToCartClick (object sender, EventArgs e)
-    {
-
-    }
 }

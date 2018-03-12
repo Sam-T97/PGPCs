@@ -43,7 +43,6 @@
                                     <b>Price: £</b> <%# Item.PRICE%> 
                                 </span>
                                 <br />
-                                <asp:Button runat="server" OnClick="BtnAddToCartClick" Text="Add To Cart" CssClass="btn btn-default"/>
                             </td>
                          </td>
                         </tr>
