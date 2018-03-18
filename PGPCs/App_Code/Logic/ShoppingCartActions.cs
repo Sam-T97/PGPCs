@@ -19,14 +19,22 @@ namespace PGPCs.Logic
         public void AddToCart(int custID, int prodID, int quantity)
         {
             
-            int cartID = custID;
+            int cartID = custID; 
             var db = new PRODUCTCONTEXT();
-            db.ShoppingCartItems.Add(new SHOPPINGCARTITEMS
+            var cartItem = db.ShoppingCartItems.SingleOrDefault(c => c.CART_ID == cartID && c.PRODUCT_ID == prodID);
+            if (cartItem == null)
             {
-                CART_ID = cartID,
-                PRODUCT_ID = prodID,
-                QUANTITY = quantity
-            });
+                db.ShoppingCartItems.Add(new SHOPPINGCARTITEMS
+                {
+                    CART_ID = cartID,
+                    PRODUCT_ID = prodID,
+                    QUANTITY = quantity
+                });
+            }
+            else
+            {
+                cartItem.QUANTITY = cartItem.QUANTITY + quantity;
+            }
             db.SaveChanges();
         }
 
