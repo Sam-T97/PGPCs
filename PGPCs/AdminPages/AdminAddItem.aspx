@@ -6,11 +6,11 @@
                 <h4>Adding a new item to the database</h4>
                 <hr />
                     <asp:ValidationSummary runat="server" CssClass="text-danger" />
-                    <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="ProductID" CssClass="col-md-2 control-label">Product ID:</asp:Label>
+                <div class="=form-group">
+                    <asp:Label runat="server" AssociatedControlID="ProductCat" CssClass="col-md-2 control-label">Product Category:</asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox runat="server" ID="ProductID" CssClass="form-control" />
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="ProductID" cssClass="text-danger" ErrorMessage="You need to enter a Product ID" />
+                        <asp:DropDownList ID="ProductCat" SelectMethod="GetCategories" runat="server" DataTextField="CATEGORY_NAME" DataValueField="CATEGORY_ID"  CssClass="form-control"/>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="ProductCat" CssClass="text-danger" ErrorMessage="You need to select a category first" />
                     </div>
                 </div>
                     <div class="form-group">
@@ -28,22 +28,22 @@
                     </div>
                 </div>
                     <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="ProductPrice" CssClass="col-md-2 control-label">Product Price:</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="ProductPrice" CssClass="col-md-2 control-label">Product Price £:</asp:Label>
                     <div class="col-md-10">
                         <asp:TextBox textmode="Number" runat="server" ID="ProductPrice" CssClass="form-control" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="ProductPrice" cssClass="text-danger" ErrorMessage="You need to enter a Product Price" />
                     </div>
                 </div>
                     <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="ImageName" CssClass="col-md-2 control-label">Image Name:</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="ImageName" CssClass="col-md-2 control-label">Image:</asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox runat="server" ID="ImageName" CssClass="form-control" />
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="ImageName" cssClass="text-danger" ErrorMessage="You need to enter an Image Name" />
+                        <asp:FileUpload ID="ImageName" runat="server" />
                     </div>
                 </div>
             <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" OnClick="NewProduct_Click" Text="Register" CssClass="btn btn-default" />
+                <asp:Button runat="server" OnClick="NewProduct_Click" Text="Add Item" CssClass="btn btn-default" />
+                <asp:Label runat="server" ID="ErrorMessage" />
             </div>
         </div>
             </div>
