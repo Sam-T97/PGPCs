@@ -23,14 +23,14 @@
                     <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="ProductDesc" CssClass="col-md-2 control-label">Product Description:</asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox runat="server" ID="ProductDesc" CssClass="form-control" />
+                        <asp:TextBox textmode="MultiLine" runat="server" ID="ProductDesc" CssClass="form-control" Columns="20" Rows="10" MaxLength="1000" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="ProductDesc" cssClass="text-danger" ErrorMessage="You need to enter a Product Description" />
                     </div>
                 </div>
                     <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="ProductPrice" CssClass="col-md-2 control-label">Product Price:</asp:Label>
                     <div class="col-md-10">
-                        <asp:TextBox runat="server" ID="ProductPrice" CssClass="form-control" />
+                        <asp:TextBox textmode="Number" runat="server" ID="ProductPrice" CssClass="form-control" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="ProductPrice" cssClass="text-danger" ErrorMessage="You need to enter a Product Price" />
                     </div>
                 </div>
