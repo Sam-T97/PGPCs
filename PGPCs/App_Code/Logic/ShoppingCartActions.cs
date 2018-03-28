@@ -48,5 +48,16 @@ namespace PGPCs.Logic
             }
             db.SaveChanges();
         }
+
+        public void ClearCart(int ID)
+        {
+            var db = new PRODUCTCONTEXT();
+            var cartItems = db.ShoppingCartItems.Where(i => i.CART_ID == ID);
+            foreach(var item in cartItems)
+            {
+                db.ShoppingCartItems.Remove(item);
+            }
+            db.SaveChanges();
+        }
     }
 }

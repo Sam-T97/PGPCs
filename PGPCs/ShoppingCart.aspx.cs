@@ -32,30 +32,47 @@ public partial class ShoppingCart : System.Web.UI.Page
 
     public void btnCheckout_Click(object sender, EventArgs e)
     {
+        //Initalise DB
         var db = new PRODUCTCONTEXT();
+        //Make a new order item
         var Order = new ORDERS();
+        //Get a list of the users cart
         List <SHOPPINGCARTITEMS> CartItems = GetCartItems();
-        List<ORDERITEMS> OrderItems = new List<ORDERITEMS>();
-        Order.CUSTOMER_ID = int.Parse(Session["UserID"].ToString());
-        Order.ORDER_PLACED = DateTime.Now;
-        db.Orders.Add(Order);
-        db.SaveChanges();
-        int orderID = Order.ORDER_ID;
-
-        foreach(SHOPPINGCARTITEMS item in CartItems)
+        //Only place the order if there are items in the cart otherwise do nothing
+        if (CartItems.Count > 0)
         {
-            OrderItems.Add(new ORDERITEMS
+            //Create a list of order items
+            List<ORDERITEMS> OrderItems = new List<ORDERITEMS>();
+            //Grab the customers id from the seesion state
+            Order.CUSTOMER_ID = int.Parse(Session["UserID"].ToString());
+            //Get the current time
+            Order.ORDER_PLACED = DateTime.Now;
+            //Add the order to the db
+            db.Orders.Add(Order);
+            //Save the changes
+            db.SaveChanges();
+            //Grab the order ID 
+            int orderID = Order.ORDER_ID;
+            //Prep the list of order items
+            foreach (SHOPPINGCARTITEMS item in CartItems)
             {
-                ORDER_ID = orderID,
-                PRODUCT_ID = item.PRODUCT_ID,
-                QUANTITY = item.QUANTITY
-            });
+                OrderItems.Add(new ORDERITEMS
+                {
+                    ORDER_ID = orderID,
+                    PRODUCT_ID = item.PRODUCT_ID,
+                    QUANTITY = item.QUANTITY
+                });
+            }
+            //Add those items to the DB
+            foreach (ORDERITEMS orderContext in OrderItems)
+            {
+                db.OrderItems.Add(orderContext);
+            }
+            //Save the changes
+            db.SaveChanges();
+            ShoppingCartActions actions = new ShoppingCartActions();
+            actions.ClearCart(int.Parse(Session["UserID"].ToString()));
+            Response.Redirect("~/OrderPlaced");
         }
-
-        foreach(ORDERITEMS orderContext in OrderItems)
-        {
-            db.OrderItems.Add(orderContext);
-        }
-        db.SaveChanges();
     }  
 }
