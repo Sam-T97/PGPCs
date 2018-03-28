@@ -6,7 +6,7 @@
     <div class="navbar navbar-inverse navbar-center">
         <div class="container-fluid">
         <ul class="nav navbar-nav">
-            <li><a href="#">Add an Item</a></li>
+            <li><a href="AdminAddItem">Add an Item</a></li>
             <li><a href="#">Remove an Item</a></li>
             <li><a href="#">Update an Items Details</a></li>
             <li><a href="#">View Active Orders</a></li>
