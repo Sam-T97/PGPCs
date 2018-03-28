@@ -35,7 +35,7 @@ public partial class ShoppingCart : System.Web.UI.Page
         var db = new PRODUCTCONTEXT();
         var Order = new ORDERS();
         List <SHOPPINGCARTITEMS> CartItems = GetCartItems();
-        List<ORDERITEMS> OrderItems = null;
+        List<ORDERITEMS> OrderItems = new List<ORDERITEMS>();
         Order.CUSTOMER_ID = int.Parse(Session["UserID"].ToString());
         Order.ORDER_PLACED = DateTime.Now;
         db.Orders.Add(Order);
