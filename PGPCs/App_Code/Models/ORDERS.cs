@@ -6,14 +6,16 @@ using PGPCs;
 using PGPCs.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace PGPCs
+namespace PGPCs.Models
 {
-    public class SHOPPINGCART
+    public class ORDERS
     {
-        [ScaffoldColumn(false), Key]
-        public int SHOPPING_CART_ID { get; set; }
+        [Key, ScaffoldColumn(false)]
+        public int ORDER_ID { get; set; }
 
         public int CUSTOMER_ID { get; set; }
+
+        public DateTime ORDER_PLACED { get; set; }
 
         public virtual CUSTOMER CUSTOMER { get; set; }
     }
