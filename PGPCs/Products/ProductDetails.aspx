@@ -26,6 +26,6 @@
         </ItemTemplate>
     </asp:FormView>
     <asp:Button runat="server" id="addToCart" text="Add To Cart" CssClass="btn btn-default" OnClick="btnAddToCartClick" />
-    Quantity:<asp:TextBox runat="server" ID="quantity" TextMode="Number" min="1" max="20" step="1" /> 
+    Quantity:<asp:TextBox runat="server" ID="quantity" TextMode="Number" min="1" max="20" step="1" Text="1" /> 
 </asp:Content>
 
