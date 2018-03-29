@@ -16,14 +16,34 @@ public partial class AdminPages_FreezeAccounts : System.Web.UI.Page
 
     public void btnSearch_Click(object sender, EventArgs e)
     {
-        AccountDetails.DataSource = GetDetails();
-        AccountDetails.DataBind();
+        getDetails();
     }
 
-    public List<CUSTOMER> GetDetails()
+    public void getDetails()
+    {
+        AccountDetails.DataSource = GetDetailsList();
+        AccountDetails.DataBind();
+    }
+    public List<CUSTOMER> GetDetailsList()
     {
         int ID = int.Parse(txtID.Text);
         var db = new PRODUCTCONTEXT();
         return db.Customers.Where(i => i.CUSTOMER_ID == ID).ToList();
+    }
+
+    protected void command(object sender, GridViewCommandEventArgs e)
+    {
+        int ID = int.Parse(txtID.Text);
+        AccountActions actions = new AccountActions();
+        switch (e.CommandName)
+        {
+            case "Freeze":
+                actions.freezeAccount(ID);
+                break;
+            case "Unfreeze":
+                actions.unFreezeAccount(ID);
+                break;
+        }
+        getDetails();
     }
 }
