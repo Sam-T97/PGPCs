@@ -19,5 +19,6 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    <asp:Button runat="server" Text="Checkout" ID="btnCheckout" OnClick="btnCheckout_Click" />
 </asp:Content>
 
