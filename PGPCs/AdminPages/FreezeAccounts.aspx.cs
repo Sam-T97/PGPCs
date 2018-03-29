@@ -12,7 +12,7 @@ public partial class AdminPages_FreezeAccounts : System.Web.UI.Page
 
     }
 
-    private void btnSearch_Click(object sender, EventArgs e)
+    public void btnSearch_Click(object sender, EventArgs e)
     {
 
     }
