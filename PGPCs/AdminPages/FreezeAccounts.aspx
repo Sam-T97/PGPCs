@@ -9,13 +9,5 @@
         <br />
         <asp:Button runat="server"  ID="btnSearch" Text="Search" CssClass="btn btn-default" OnClick="btnSearch_Click" />
     </div>
-    <asp:GridView runat="server" ID="AccountDetails" AutoGenerateColumns="false" CellPadding="4" GridLines="Vertical"
-        ItemType="PGPCs.CUSTOMER" CssClass="table table-striped table-bordered">
-        <Columns>
-            <asp:BoundField DataField="CUSTOMER.CUSTOMER_FIRST_NAME" HeaderText="First Name" />
-            <asp:BoundField DataField="CUSTOMER.CUSTOMER_LAST_NAME" HeaderText="Last Name" />
-            <asp:ButtonField Text="Freeze Account" ButtonType="Button" />
-        </Columns>
-    </asp:GridView>
 </asp:Content>
 
