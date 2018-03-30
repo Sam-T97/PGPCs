@@ -10,7 +10,7 @@
             <li><a href="#">Remove an Item</a></li>
             <li><a href="#">Update an Items Details</a></li>
             <li><a href="AdminOrders">View Active Orders</a></li>
-            <li><a href="#">Freeze Customer Accounts</a></li>
+            <li><a href="FreezeAccounts">Freeze Customer Accounts</a></li>
         </ul>
        </div>
     </div>

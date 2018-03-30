@@ -9,6 +9,9 @@ public partial class AdminPages_AdminHome : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if(Convert.ToBoolean(Session["isAdmin"]) != true)
+        {
+            Response.Redirect("~/Account/Login");
+        }
     }
 }
