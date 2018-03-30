@@ -21,4 +21,9 @@ public partial class AdminPages_AdminOrders : System.Web.UI.Page
         IQueryable<ORDERS> query = db.Orders;
         return query;
     }
+
+    protected void ViewDetails_Command(object sender, CommandEventArgs e)
+    {
+        Response.Redirect("AdminOrderDetails?ID=" + e.CommandArgument);
+    }
 }

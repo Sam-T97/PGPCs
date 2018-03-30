@@ -23,15 +23,16 @@
                 </GroupTemplate>
                 <ItemTemplate>
                     <td runat="server">
-                    <table>
+                    <table border="1">
                         <tr>
                             <td>
-                                 <b>Order ID:<%#:Item.ORDER_ID%> </b> &nbsp;
-                                 <b>Customer ID:<%#:Item.CUSTOMER_ID%> </b> &nbsp;
-                                 <b>Order Placed:<%#:Item.ORDER_PLACED%> </b> &nbsp;
-                                 <asp:Button runat="server" CommandName=<%#:Item.ORDER_ID %> Text="View Order Details"/>
+                                 <b>Order ID: </b><%#:Item.ORDER_ID%> &nbsp;
+                                 <b>Order Placed: </b><%#:Item.ORDER_PLACED%> &nbsp;
+                                 <b>Reported Status: </b><%#: Item.STATUS %> &nbsp;
+                                 <asp:LinkButton runat="server" ID="ViewDetails" Text="View Details" OnCommand="ViewDetails_Command" CommandArgument="<%#: Item.ORDER_ID %>" />
                                  <br />
                             </td>
+                           </tr>
                          </td>
                     </table>
                 </ItemTemplate>
