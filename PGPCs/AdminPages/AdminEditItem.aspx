@@ -7,15 +7,5 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="prodID" CssClass="text-danger" ErrorMessage="You must enter the Product ID" />
         </div>
             <asp:Button runat="server"  ID="btnSearch" Text="Search" CssClass="btn btn-default" OnClick="btnSearch_Click" />
-        <asp:GridView runat="server" ID="ProductInfo" AutoGenerateColumns="false" CellPadding="4" GridLines="Vertical"
-         CssClass="table table-striped table-bordered" ItemType="PGPCs.Models.PRODUCT">
-        <Columns>
-            <asp:BoundField DataField="PRODUCT_ID" HeaderText="Product ID:" />
-            <asp:BoundField DataField="PRODUCT_NAME" HeaderText="Product Name:" />
-            <asp:BoundField DataField="PRODUCT_DESCRIPTION" HeaderText="Product Description:" />
-            <asp:BoundField DataField="IMAGE_NAME" HeaderText="Image Name:" />
-            <asp:BoundField DataField="PRICE" HeaderText="Product Price:" />
-            <asp:BoundField DataField="CATEGORY_ID" HeaderText="Category ID:" />
-        </Columns>
-    </asp:GridView>
+
 </asp:Content>
