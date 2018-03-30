@@ -15,20 +15,16 @@ public partial class AdminPages_AdminEditItem : System.Web.UI.Page
     }
     public void btnSearch_Click(object sender, EventArgs e)
     {
-        getProduct();
+        getdetails();
     }
 
-    public void getProduct()
+    public void getdetails()
     {
-        ProductInfo.DataSource = GetDetailsList();
-        ProductInfo.DataBind();
+        
     }
 
-    public List<PRODUCT> GetDetailsList()
+    public void btnSave_Click(object sender, EventArgs e)
     {
-        int ID = int.Parse(prodID.Text);
-        var db = new PRODUCTCONTEXT();
-        return db.Products.Where(i => i.PRODUCT_ID == ID).ToList();
-    }
 
+    }
 }
