@@ -4,12 +4,13 @@
 <asp:Content ID="OrderList" ContentPlaceHolderID="MainContent" Runat="Server">
     <section>
         <div>
-            <h1>So There are some orders maybe for you to look at...</h1>
-            <asp:ListView ID="ordersList" runat="server" DataKeyNames="ORDER_ID" GroupItemCount="1" ItemType="PGPCs.Models.ORDERS" SelectMethod="GetOrders">
+            <h1>View current orders.</h1>
+            <asp:ListView ID="ordersList" runat="server" DataKeyNames="ORDER_ID" GroupItemCount="1" 
+                ItemType="PGPCs.Models.ORDERS" SelectMethod="GetOrders">
                  <EmptyDataTemplate>
                     <table>
                         <tr>
-                            <td>No data was returned. The server may be experiencing an issue. Try again later</td>
+                            <td>No data was returned, there are currently no active orders</td>
                         </tr>
                     </table>
                  </EmptyDataTemplate>
@@ -24,7 +25,7 @@
                     <td runat="server">
                     <table>
                         <tr>
-                            <td>      
+                            <td>
                                  <b>Order ID:<%#:Item.ORDER_ID%> </b>
                                  <b>Customer ID:<%#:Item.CUSTOMER_ID%> </b>
                                  <b>Order Placed:<%#:Item.ORDER_PLACED%> </b>
