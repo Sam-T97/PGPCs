@@ -47,6 +47,8 @@ public partial class ShoppingCart : System.Web.UI.Page
             Order.CUSTOMER_ID = int.Parse(Session["UserID"].ToString());
             //Get the current time
             Order.ORDER_PLACED = DateTime.Now;
+            //Add Status
+            Order.STATUS = "Order Placed";
             //Add the order to the db
             db.Orders.Add(Order);
             //Save the changes

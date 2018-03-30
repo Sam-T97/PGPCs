@@ -15,6 +15,8 @@ namespace PGPCs.Models
 
         public int CUSTOMER_ID { get; set; }
 
+        public string STATUS { get; set; }
+
         public DateTime ORDER_PLACED { get; set; }
 
         public virtual CUSTOMER CUSTOMER { get; set; }
