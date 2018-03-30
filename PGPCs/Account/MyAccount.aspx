@@ -19,6 +19,7 @@
         </Columns>
     </asp:GridView>
 
+    <h2><b>Your Orders Details:</b></h2>
     <asp:GridView runat="server" ItemType="PGPCs.Models.ORDERITEMS" AutoGenerateColumns="false"
         ID="orderDetails" CellPadding="4" GridLines="Vertical" CssClass="table table-striped table-bordered">
         <Columns>
@@ -29,6 +30,11 @@
             <asp:TemplateField HeaderText="Item Subtotal">
                 <ItemTemplate>
                     <%#: Convert.ToDouble(Item.QUANTITY * Item.PRODUCT.PRICE)%>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="View Invoice">
+                <ItemTemplate>
+                    <a href="Invoice?ID=<%#: Item.ORDER_ID %>" target="_blank">View Invoice</a>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
