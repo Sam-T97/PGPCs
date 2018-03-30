@@ -26,10 +26,10 @@
                     <table>
                         <tr>
                             <td>
-                                 <b>Order ID:<%#:Item.ORDER_ID%> </b>
-                                 <b>Customer ID:<%#:Item.CUSTOMER_ID%> </b>
-                                 <b>Order Placed:<%#:Item.ORDER_PLACED%> </b>
-                                 <a href="#">View Order Details</a>
+                                 <b>Order ID:<%#:Item.ORDER_ID%> </b> &nbsp;
+                                 <b>Customer ID:<%#:Item.CUSTOMER_ID%> </b> &nbsp;
+                                 <b>Order Placed:<%#:Item.ORDER_PLACED%> </b> &nbsp;
+                                 <asp:Button runat="server" CommandName=<%#:Item.ORDER_ID %> Text="View Order Details"/>
                                  <br />
                             </td>
                          </td>

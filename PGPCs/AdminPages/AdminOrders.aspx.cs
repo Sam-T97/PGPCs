@@ -15,14 +15,10 @@ public partial class AdminPages_AdminOrders : System.Web.UI.Page
 
     }
 
-    public IQueryable<ORDERS> GetOrders([QueryString("ID")] Nullable<int> CatID)
+    public IQueryable<ORDERS> GetOrders()
     {
         var db = new PRODUCTCONTEXT();
         IQueryable<ORDERS> query = db.Orders;
-        if (CatID.HasValue && CatID > 0)
-        {
-            query = query.Where(p => p.ORDER_ID == CatID);
-        }
         return query;
     }
 }
