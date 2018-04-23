@@ -40,7 +40,7 @@
                                 </a>
                                 <br />
                                 <span>
-                                    <b>Price: £</b> <%# Item.PRICE%> 
+                                    <b>Price: £ <%# Item.PRICE%> </b>
                                 </span>
                                 <br />
                             </td>
