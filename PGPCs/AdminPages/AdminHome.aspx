@@ -9,7 +9,7 @@
             <li><a href="AdminAddItem">Add an Item</a></li>
             <li><a href="#">Remove an Item</a></li>
             <li><a href="AdminEditItem">Update an Items Details</a></li>
-            <li><a href="#">View Active Orders</a></li>
+            <li><a href="AdminOrders">View Active Orders</a></li>
             <li><a href="FreezeAccounts">Freeze Customer Accounts</a></li>
         </ul>
        </div>
