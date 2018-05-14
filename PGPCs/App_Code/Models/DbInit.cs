@@ -9,7 +9,7 @@ using System.Text;
 
 namespace PGPCs.Models
 {
-    public class DbInit : DropCreateDatabaseAlways<PRODUCTCONTEXT>
+    public class DbInit : DropCreateDatabaseIfModelChanges<PRODUCTCONTEXT>
     {
         protected override void Seed(PRODUCTCONTEXT context)
         {
