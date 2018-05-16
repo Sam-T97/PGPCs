@@ -16,7 +16,9 @@
                     <td style="vertical-align:top; text-align:left">
                         <b>Description:</b><br /><%#:Item.PRODUCT_DESCRIPTION %>
                         <br />
-                        <span><b>Price:</b>£ <%#: Item.PRICE %></span>
+                        <span><b>Price Incl VAT: </b>£ <%#: Item.PRICE %></span>
+                        <br />
+                        <span><b>VAT @ 20%: </b>£ <%#: Item.PRICE * 0.2 %></span>
                         <br />
                         <span><b>Product Number:</b><%#: Item.PRODUCT_ID %></span>
                         <br />
