@@ -25,15 +25,16 @@
     </div>
     <div style="text-align:right; display:inline-block; float:right">
         <address>
-            trgtg <br/>
-            rtgrtg <br/>
-            rtgrtg <br/>
-            rrtgrt <br/>
-            rtggg <br/>
+            Price Gouger PCs <br/>
+            123 Example Street <br/>
+            Plymouth <br/>
+            Devon <br/>
+            PL1 111 <br/>
         </address>
     </div>
                 <div style="margin:0 auto; width:50%; align-content:center">
     <h1><b>Your Order:</b></h1>
+
         <asp:GridView runat="server" ItemType="PGPCs.Models.ORDERS" AutoGenerateColumns="false"
         ID="orders" CellPadding="4" GridLines="Vertical" CssClass="table table-bordered table-striped" 
         ShowHeaderWhenEmpty="true" EmptyDataText="No Orders Placed">
@@ -42,6 +43,7 @@
             <asp:BoundField DataField="ORDER_PLACED" HeaderText="Order Placed On" />
         </Columns>
     </asp:GridView>
+
     <asp:GridView runat="server" ItemType="PGPCs.Models.ORDERITEMS" AutoGenerateColumns="false"
         ID="orderDetails" CellPadding="4" GridLines="Vertical" CssClass="table table-striped table-bordered">
         <Columns>
@@ -55,7 +57,7 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-                        <br />
+    <br />
     <br />
                         Thank you for your custom we hope you will shop with us again soon!
             </div>

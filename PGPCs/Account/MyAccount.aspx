@@ -26,8 +26,8 @@
             <asp:BoundField DataField="PRODUCT_ID" HeaderText="Product SKU:"/>
             <asp:BoundField DataField="PRODUCT.PRODUCT_NAME" HeaderText="Product Name:" />
             <asp:BoundField DataField="QUANTITY" HeaderText="Quantity:" />
-            <asp:BoundField DataField="PRODUCT.PRICE" HeaderText="Price Per Unit" />
-            <asp:TemplateField HeaderText="Item Subtotal">
+            <asp:BoundField DataField="PRODUCT.PRICE" HeaderText="Price Per Unit £" />
+            <asp:TemplateField HeaderText="Item Subtotal £">
                 <ItemTemplate>
                     <%#: Convert.ToDouble(Item.QUANTITY * Item.PRODUCT.PRICE)%>
                 </ItemTemplate>
