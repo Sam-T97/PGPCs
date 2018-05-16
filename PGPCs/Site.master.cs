@@ -75,6 +75,7 @@ public partial class SiteMaster : MasterPage
             LinkRegister.Visible = false;
             LinkManageAcc.Visible = true;
             LinkLogout.Visible = true;
+            LinkCart.Visible = true;
         }
         if(Convert.ToBoolean(Session["isAdmin"]) == true)
         {

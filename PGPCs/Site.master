@@ -71,7 +71,7 @@
                         </li>
                     </ul>
                   <ul class="nav navbar-nav navbar-right">
-                      <li><a runat="server" href="ShoppingCart">Cart</a></li>
+                      <li><a runat="server" id="LinkCart" href="ShoppingCart" visible="false">Cart</a></li>
                       <li><a runat="server" id="LinkRegister" href="~/Account/Register">Register</a></li>
                       <li><a runat="server" id="LinkLogin" href="~/Account/Login">Log in</a></li>
                       <li><a runat="server" id="LinkManageAcc" href="~/Account/MyAccount" visible="false">My Account</a></li>
