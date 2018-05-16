@@ -42,7 +42,10 @@ namespace PGPCs.Models
         public string PASSWORD { get; set; }
 
         [Required]
-        public bool FROZEN { get; set; } = false;
+        public bool FROZEN { get; set; }
+
+        [Required]
+        public bool NEW_ACCT { get; set; } = true;
 
     }
 }

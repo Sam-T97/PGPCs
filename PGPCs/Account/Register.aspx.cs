@@ -25,6 +25,7 @@ public partial class Account_Register : Page
         Cust.POSTCODE = PostCode.Text;
         Cust.EMAIL_ADDRESS = EmailAddress.Text;
         Cust.PASSWORD = hashPW;
+        Cust.FROZEN = true;
         db.Customers.Add(Cust);
         db.SaveChanges();
         Response.Redirect("/Account/Login.aspx");

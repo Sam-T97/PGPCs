@@ -45,7 +45,8 @@ public partial class Account_Login : Page
             }
             else
             {
-                FailureText.Text = "Your account is frozen. Please contact us to discuss this issue";
+                FailureText.Text = "Your account is frozen. If your account is new it must first be approved before you can access the site. <br/>" +
+                    "If your account is not new then please contact us to discuss the issue.";
                 ErrorMessage.Visible = true;
                 return;
             }

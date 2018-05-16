@@ -118,7 +118,8 @@ namespace PGPCs.Models
                 POSTCODE = "hfg pwo",
                 EMAIL_ADDRESS = "Test@test.com",
                 PASSWORD = BitConverter.ToString(crypt.ComputeHash(Encoding.ASCII.GetBytes("Test"))),
-                FROZEN = false
+                FROZEN = false,
+                NEW_ACCT = false               
             }
             };
             return Custs;
