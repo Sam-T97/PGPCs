@@ -11,6 +11,7 @@
             <li><a href="AdminOrders">View Active Orders</a></li>
             <li><a href="FreezeAccounts">Freeze Customer Accounts</a></li>
             <li><a href="ApproveNewAccounts">Approve New Accounts</a></li>
+            <li><a href="AddAnAdmin">Add a New Employee</a></li>
         </ul>
        </div>
     </div>
