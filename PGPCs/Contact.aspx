@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="Contact Us" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h1> So... You want to complain?...</h1>
-    <p>
+    <h1 style =" text-align:center"><b> Complaints/Contact </b></h1>
+    <p style= "font-size: 120%">
         <br />
-        You won't find any details here so keep your complaints to yourself.
+        If you have any queries or complaints that you would like to make about service that you have received
+        feel free to contact us at Inquiries@PGPC.com
     </p>
 </asp:Content>
