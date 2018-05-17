@@ -19,7 +19,7 @@ public partial class Account_Invoice : System.Web.UI.Page
     public List<CUSTOMER> getDetails()
     {
         var db = new PRODUCTCONTEXT();
-        int ID = 1;//int.Parse(Session["UserID"].ToString());
+        int ID = int.Parse(Session["UserID"].ToString());
         return db.Customers.Where(u => u.CUSTOMER_ID == ID).ToList();
     }
 
